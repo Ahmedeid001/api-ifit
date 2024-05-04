@@ -13,7 +13,7 @@ class ListedSeeder extends Seeder
      */
     public function run(): void
     {
-        $data = file_get_contents("C:/xamppp/htdocs/larvelnewapp/article.json");
+        $data = file_get_contents("article.json");
         $artworks = json_decode($data, true);
 
         // Insert data into 'art' table
