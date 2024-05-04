@@ -11,7 +11,7 @@ class articalecontroller extends Controller
 {
     public function index()
     {
-        $articales= art::all();
+        $articales= Articale::all();
         if($articales->count()>0){
 
             return response()->json([
