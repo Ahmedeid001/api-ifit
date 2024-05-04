@@ -13,8 +13,8 @@ class food extends Model
     protected $fillable = [
         'name',
         'ingredients',
-        'method',
         'macros',
+        'method',
         'img',   
         
     ];

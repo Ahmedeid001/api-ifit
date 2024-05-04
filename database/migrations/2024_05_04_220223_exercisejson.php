@@ -11,11 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('allart', function (Blueprint $table) {
+        Schema::create('json', function (Blueprint $table) {
             $table->id();
-             
-            $table->string('title');
-            $table->text('content');
+            $table->string('name');
+            $table->string('primary_muscles');      
+            $table->string('secondary_muscles');  
+            $table->string('gifUrl');
+            $table->string('rep');      
+            $table->string('Rest_time'); 
+            $table->longText('instructions');
             $table->timestamps();
         });
     }
@@ -25,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('allart');
+        //
     }
 };

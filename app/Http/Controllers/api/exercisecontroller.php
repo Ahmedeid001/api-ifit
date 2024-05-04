@@ -37,6 +37,11 @@ class exercisecontroller extends Controller
     {
         $exe= exercise::find($id);
         if($exe){
+
+            $exe->instructions = json_decode($exe->instructions);
+            $exe->primary_muscles = json_decode($exe->primary_muscles);
+            $exe->secondary_muscles = json_decode($exe->secondary_muscles);
+
             return response()->json([
                'status'=>200,
                 'data'=>$exe

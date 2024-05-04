@@ -11,18 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('article', function (Blueprint $table) {
+        Schema::create('feedback', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->longText('description'); // Change data type to longtext
-            $table->string('image');
-            $table->string('note');  
+            $table->string('msg');      
             $table->timestamps();
-        });
-
-        // Modify the 'created_at' column to use CURRENT_TIMESTAMP
-        Schema::table('article', function (Blueprint $table) {
-            $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'))->change();
         });
     }
 
@@ -31,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        
+        //
     }
 };

@@ -14,6 +14,7 @@ class addarticalecontroller extends Controller
             'name'=>'required|string|max:25',
             'description'=>'required',
             'image'=>'required|url',
+            'note'=>'required',
             
     
          ]);

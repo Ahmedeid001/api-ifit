@@ -52,7 +52,7 @@ class articalecontroller extends Controller
     {
         try {
              
-            $latestRecords = art::orderBy('created_at', 'desc')->take(3)->get();
+            $latestRecords = Articale::orderBy('created_at', 'desc')->take(3)->get();
 
             if ($latestRecords->isNotEmpty()) {
                  
