@@ -18,7 +18,7 @@ class ListedSeeder extends Seeder
 
         // Insert data into 'art' table
         foreach ($artworks as $artwork) {
-            DB::table('art')->insert($artwork);
+            DB::table('arts')->insert($artwork);
         }
     }
 }
