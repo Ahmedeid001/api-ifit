@@ -15,31 +15,12 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
         $this->call(ListedSeeder::class);
+        $this->call(FoodSeeder::class);
+        $this->call(ExerciseSeeder::class);
         // User::factory()->create([
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
     }
-        //food
-    public function store(): void
-    {
-        // User::factory(10)->create();
-        $this->call(foodseeder::class);
-        // User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
-    }
-
-        //exercise  
-
-        // public function push(): void
-        // {
-        //     // User::factory(10)->create();
-        //     $this->call(ListedSeeder::class);
-        //     // User::factory()->create([
-        //     //     'name' => 'Test User',
-        //     //     'email' => 'test@example.com',
-        //     // ]);
-        // }
+     
 }
